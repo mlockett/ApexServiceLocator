@@ -1,0 +1,7 @@
+
+/*
+!/force-app/
+!.gitignore
+!README.md
+!sfdx-project.json
+/force-app/main/default/profiles
