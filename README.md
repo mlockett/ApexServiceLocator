@@ -51,10 +51,10 @@ If an Interface resolves to a class that implements "Initable", the service loca
 
 In this case, the service locator is called as such:
 
-   Map<String, Object> parameters = new Map<String, Object>();
-   parameters.put('myParamName1, 5);
-   parameters.put('myParamName2, 'John Doe');
-   Object myTestObject = (ServiceLocator.IMyTest) ServiceLocator.getInstance(myTestInterface, parameters);
+    Map<String, Object> parameters = new Map<String, Object>();
+    parameters.put('myParamName1, 5);
+    parameters.put('myParamName2, 'John Doe');
+    Object myTestObject = (ServiceLocator.IMyTest) ServiceLocator.getInstance(myTestInterface, parameters);
  		 
 
 ## Resources
