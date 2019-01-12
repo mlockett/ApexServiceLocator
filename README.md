@@ -1,6 +1,8 @@
 # Apex Service Locator
-A Service Locator library for the force.com platform.
-[Service Locator Pattern wikipedia](https://en.wikipedia.org/wiki/Service_locator_pattern)  
+A Service Locator library for the force.com platform.  
+
+See Resources below for more information on the Service Locator pattern.
+
 This library is most useful for developers that prefer to program against interfaces for loose coupling of code. 
 In general, it's not recommended for low-code solutions. It is invaluable when working with larger code bases, 
 and when one desires to do _true_ unit testing rather than only integration testing.
@@ -58,6 +60,7 @@ In this case, the service locator is called as such:
  		 
 
 ## Resources
+[Martin Fowler on Service Locator](https://martinfowler.com/articles/injection.html#UsingAServiceLocator)  
 [Service Locator Pattern wikipedia](https://en.wikipedia.org/wiki/Service_locator_pattern)
 
 ## Future
