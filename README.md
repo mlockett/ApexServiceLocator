@@ -2,17 +2,19 @@
 A Service Locator library for the force.com platform.
 [Service Locator Pattern wikipedia](https://en.wikipedia.org/wiki/Service_locator_pattern)  
 This library is most useful for developers that prefer to program against interfaces for loose coupling of code. 
-In general, it's not recommended for low-code solutions. Its value come when working with larger code bases, 
-and with the need to do true unit testing rather than integration testing.
+In general, it's not recommended for low-code solutions. It is invaluable when working with larger code bases, 
+and when one desires to do _true_ unit testing rather than only integration testing.
 
 ## Usage
 
 ##### To get an instance of a dependant class inside another class:  
 `IMytest test = (ServiceLocator.IMyTest) ServiceLocator.getInstance(ServiceLocator.IMyTest.class);`
 
-The locator will look first to see if code is setting the mapping; then check if the Interface has been explicitly mapped
-in custom metadata; then check if it follows a convention that can return an object, then finally throws a MapException 
-if the Interface cannot be resolved to an object.
+To resolve a dependancy, the Service Locator checks these items in order (the first found item wins):
+1. The mapping is set explicitly in code
+2. The Interface has been explicitly mapped in custom metadata
+3. If it follows a convention that can return an object
+4. Then finally throws a ServiceLocator.MapException if the Interface cannot be resolved to an object.
 
 ##### To test with your own class:
 `ServiceLocator.overwriteMap(ServiceLocator.IMyTest.class, ServiceLocator.MyTest2.class);`  
