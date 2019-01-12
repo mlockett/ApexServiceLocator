@@ -43,6 +43,18 @@ See the test example in the LocatorConfig__mdt
 If you have an interface 'IMySpecialThing', and there exists a class 'MySpecialThing', calling the locator for 
 IMySpecialThing will return an instance of MySpecialThing (assuming there is no specific configuration in the LocatorConfig
 custom metadata object)
+
+##### To instantiate a class with parameters  
+Because the Apex language does not fully support reflection, we use a workaround for objects that need parameters to be properly instantiated.
+
+If an Interface resolves to a class that implements "Initable", the service locator can accept a "parameters" argument in the form of a Map<String, Object> where the string is the parameter name and the Object is the value for the parameter. To implement the interface, one must write a method called "init" that takes a Map<String, Object>. The init method should set the appropriate fields in the object based on the specific needs of the class. In this case, the Service Locator, will create the object, then call the init method, passing the map.
+
+In this case, the service locator is called as such:
+
+   Map<String, Object> parameters = new Map<String, Object>();
+   parameters.put('myParamName1, 5);
+   parameters.put('myParamName2, 'John Doe');
+   Object myTestObject = (ServiceLocator.IMyTest) ServiceLocator.getInstance(myTestInterface, parameters);
  		 
 
 ## Resources
