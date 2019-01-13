@@ -7,6 +7,8 @@ This library is most useful for developers that prefer to program against interf
 In general, it's not recommended for low-code solutions. It is invaluable when working with larger code bases, 
 and when one desires to do _true_ unit testing rather than only integration testing.
 
+[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
+
 ## Usage
 
 ##### To get an instance of a dependant class inside another class:  
