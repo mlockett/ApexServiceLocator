@@ -7,6 +7,8 @@ This library is most useful for developers that prefer to program against interf
 In general, it's not recommended for low-code solutions. It is invaluable when working with larger code bases, 
 and when one desires to do _true_ unit testing rather than only integration testing.
 
+[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
+
 ## Usage
 
 ##### To get an instance of a dependant class inside another class:  
@@ -16,9 +18,7 @@ To resolve a dependancy, the Service Locator checks these items in order (the fi
 1. The mapping is set explicitly in code
 2. The Interface has been explicitly mapped in custom metadata
 3. If it follows a convention that can return an object
-4. If it can instantiate an object from the given name, it will return that (this can be used to make a class reference 
-be set at run-time which can be used to work around various Salesforce compilation errors)
-5. Then finally throws a ServiceLocator.MapException if the Interface cannot be resolved to an object.
+4. Then finally throws a ServiceLocator.MapException if the Interface cannot be resolved to an object.
 
 ##### To test with your own class:
 `ServiceLocator.overwriteMap(ServiceLocator.IMyTest.class, ServiceLocator.MyTest2.class);`  
