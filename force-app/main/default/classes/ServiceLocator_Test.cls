@@ -27,14 +27,11 @@ private with sharing class ServiceLocator_Test {
 	static void getInstanceWithNoMatch_ThrowsServiceLocatorMapException() {
 		try {
 			// input name w/ no map
-			Object testObject = (ServiceLocator.IMyTest) ServiceLocator.getInstance('Account');
+			Object testObject = (ServiceLocator.INoMapTest) ServiceLocator.getInstance(ServiceLocator.INoMapTest.class);
 			System.assert(false, 'Should throw ServiceLocator.MapException');
 		}
 		catch (ServiceLocator.MapException e) {
 			System.assert(true, 'Should throw ServiceLocator.MapException');
-		}
-		catch (System.Exception e) {
-			System.assert(false, 'Should throw ServiceLocator.MapException');
 		}
 	}
 

@@ -86,6 +86,16 @@ public with sharing class ServiceLocator {
             return t.newInstance();
          }
       }
+
+      // attempt returning concrete type
+      Type t = Type.forName(interfaceName);
+      try{
+         return t.newInstance();
+      }
+      catch(Exception e){
+         //intentionally blank-- this is the only reliable way to determine if we can get an instance
+      }
+
       throw new MapException();
    }
 
@@ -189,5 +199,12 @@ public with sharing class ServiceLocator {
       public Integer doStuff() {
          return 2;
       }
+   }
+
+   /**
+    * because custom metadata cannot be set in Apex tests, we have to have some test data in the class
+    */
+   public interface INoMapTest {
+      Integer doStuff();
    }
 }
