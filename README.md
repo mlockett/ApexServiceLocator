@@ -64,6 +64,7 @@ In this case, the service locator is called as such:
 ## Resources
 [Martin Fowler on Service Locator](https://martinfowler.com/articles/injection.html#UsingAServiceLocator)  
 [Service Locator Pattern wikipedia](https://en.wikipedia.org/wiki/Service_locator_pattern)
+[Mike Lockett Blog](http://www.objectfactory.ws/tech/service-locator.php)
 
 ## Future
 Might enable user to point to a factory class which would build the object as needed
