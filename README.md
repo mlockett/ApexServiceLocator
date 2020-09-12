@@ -7,8 +7,6 @@ This library is most useful for developers that prefer to program against interf
 In general, it's not recommended for low-code solutions. It is invaluable when working with larger code bases, 
 and when one desires to do _true_ unit testing rather than only integration testing.
 
-[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com/)
-
 ## Usage
 
 ##### To get an instance of a dependant class inside another class:  
@@ -64,7 +62,7 @@ In this case, the service locator is called as such:
 ## Resources
 [Martin Fowler on Service Locator](https://martinfowler.com/articles/injection.html#UsingAServiceLocator)  
 [Service Locator Pattern wikipedia](https://en.wikipedia.org/wiki/Service_locator_pattern)  
-[Mike Lockett Blog](http://www.objectfactory.ws/tech/service-locator.php)
+[Mike Lockett Blog](https://www.objectfactory.ws/tech/service-locator.php)
 
 ## Future
 Might enable user to point to a factory class which would build the object as needed
