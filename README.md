@@ -1,5 +1,6 @@
 # Apex Service Locator
 A Service Locator library for the force.com platform.  
+[Mike Lockett Blog](https://www.objectfactory.ws/tech/service-locator.php)
 
 See Resources below for more information on the Service Locator pattern, as well as [my notes](http://www.objectfactory.ws/tech/service-locator.php).
 
